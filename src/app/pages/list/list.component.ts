@@ -32,7 +32,6 @@ export class ListComponent implements OnInit {
   }
 
   setfilterName(value) {
-    console.log("change");
     this.sharedData.filter = {
       name: value
     };

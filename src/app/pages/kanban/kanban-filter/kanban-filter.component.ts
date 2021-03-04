@@ -14,7 +14,6 @@ export class KanbanFilterComponent implements OnInit {
   }
 
   setfilterName(value) {
-    console.log("change");
     this.sharedTaskData.filter = {
       name: value
     };
