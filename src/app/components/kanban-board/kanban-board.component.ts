@@ -31,7 +31,7 @@ export class KanbanBoardComponent implements OnInit {
   }
 
   filterTaskByStatus(status) {
-    return this.sharedData.tasks.filter(task => {
+    return this.sharedData.getTasks().filter(task => {
         return task.status == status
     });
   }

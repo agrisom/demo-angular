@@ -11,6 +11,9 @@ export class SharedTaskDataServiceService {
   users : User[] = [];
   tasks : Task[] = [];
   taskDetail : Task = null;
+  filter : {
+    name: string
+  };
 
   constructor(
     private userService: UserService,
@@ -32,5 +35,16 @@ export class SharedTaskDataServiceService {
       this.tasks = tasks;
       console.log("list updated");
     });
+  }
+
+  getTasks() {
+    if(this.filter && this.filter.name && this.filter.name.length) {
+      const condition = this.filter.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      return this.tasks.filter(task => {
+        return task.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(condition) != -1
+      })
+    } else {
+      return this.tasks;
+    }
   }
 }

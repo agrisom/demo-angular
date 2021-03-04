@@ -48,6 +48,9 @@
                 "move": "move"
             }
         },
-        "addTaskButton": "Add task"
+        "addTaskButton": "Add task",
+        "filter": {
+            "name": "Filter by task name..."
+        }
     }
 }

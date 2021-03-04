@@ -1,5 +1,10 @@
 <div class="container">
     <h1>{{'list.title' | translate}}</h1>
+    <div class="mt-2">
+        <label class="mr-1" for="filterName">{{'list.filter' | translate}}</label>
+        <input type="search" id="filterName" [value]="getFilterName()" [placeholder]="'kanban.filter.name' | translate" (input)="setfilterName($event.target.value)">
+    </div>
+
     <kanban-list></kanban-list>
 
     <div class="mt-2">

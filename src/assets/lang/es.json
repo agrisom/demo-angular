@@ -49,6 +49,9 @@
                 "move": "mover"
             }
         },
-        "addTaskButton": "Añadir tarea"
+        "addTaskButton": "Añadir tarea",
+        "filter": {
+            "name": "Filtrar por nombre de tarea..."
+        }
     }
 }

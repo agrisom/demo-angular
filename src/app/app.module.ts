@@ -26,6 +26,8 @@ import { ListComponent } from './pages/list/list.component';
 import { OtherComponent } from './pages/other/other.component';
 import { CustomTimePipe } from './pipes/custom-time.pipe';
 import { MyCustomDatePipe } from './pipes/my-custom-date.pipe';
+import { ViewMenuComponent } from './pages/kanban/view-menu/view-menu.component';
+import { KanbanFilterComponent } from './pages/kanban/kanban-filter/kanban-filter.component';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -46,7 +48,9 @@ registerLocaleData(localeEn, 'en');
     ListComponent,
     OtherComponent,
     CustomTimePipe,
-    MyCustomDatePipe
+    MyCustomDatePipe,
+    ViewMenuComponent,
+    KanbanFilterComponent
   ],
   imports: [
     BrowserModule,

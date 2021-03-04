@@ -1,10 +1,6 @@
 <div class="mt-2">
-    <label class="mr-1" for="filterName">{{'list.filter' | translate}}</label>
-    <input type="search" id="filterName" [value]="filterName" (input)="filterName = $event.target.value">
-</div>
-<div class="mt-2">
     <div class="listitems">
-        <table class="listitems__table" *ngIf="tasksFiltered().length; else elseBlock">
+        <table class="listitems__table" *ngIf="getTasks().length; else elseBlock">
             <thead>
                 <tr class="listitems__headers">
                 <th>{{'list.table.headers.task' | translate}}</th>
@@ -14,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="listitems__row" *ngFor="let task of tasksFiltered()">
+                <tr class="listitems__row" *ngFor="let task of getTasks()">
                     <td><status-button [text]="task.name" (click)="openDetails(task)"></status-button></td>
                     <td>{{getUsersNames(task.users)}}</td>
                     <td><status-button [text]="task.status" (click)="changeStatus(task)"></status-button></td>

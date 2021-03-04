@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SharedTaskDataServiceService } from 'src/app/store/shared-task-data-service.service';
 
 @Component({
@@ -7,8 +7,7 @@ import { SharedTaskDataServiceService } from 'src/app/store/shared-task-data-ser
   styleUrls: ['./kanban-list.component.sass']
 })
 export class KanbanListComponent implements OnInit {
-  filterName: string = '';
-
+  
   constructor(
     private sharedData: SharedTaskDataServiceService
   ) { }
@@ -31,14 +30,7 @@ export class KanbanListComponent implements OnInit {
     this.sharedData.taskDetail = task;
   }
 
-  tasksFiltered() {
-    if(this.filterName && this.filterName.length) {
-      const condition = this.filterName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-      return this.sharedData.tasks.filter(task => {
-        return task.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(condition) != -1
-      })
-    } else {
-      return this.sharedData.tasks;
-    }
+  getTasks() {
+    return this.sharedData.getTasks();
   }
 }

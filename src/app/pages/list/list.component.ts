@@ -30,4 +30,18 @@ export class ListComponent implements OnInit {
   setTaskDetails() {
     this.sharedData.taskDetail=null;
   }
+
+  setfilterName(value) {
+    console.log("change");
+    this.sharedData.filter = {
+      name: value
+    };
+  }
+
+  getFilterName() {
+    if(this.sharedData.filter && this.sharedData.filter.name && this.sharedData.filter.name.length) {
+      return this.sharedData.filter.name;
+    }
+    return null;
+  }
 }
