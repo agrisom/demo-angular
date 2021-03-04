@@ -1,0 +1,49 @@
+{
+    "mainNav": {
+        "home": "Home"
+    },
+    "list": {
+        "title": "Task's list",
+        "filter": "Filter by taskname",
+        "table": {
+            "headers": {
+                "task": "Task",
+                "users": "Users",
+                "status": "Status",
+                "date": "Date"
+            },
+            "empty": "There isn's elements"
+        },
+        "addTaskButton": "Add task"
+    },
+    "modal": {
+        "closeButton": "Close"
+    },
+    "newTask": {
+        "title": "Add task",
+        "form": {
+            "name": "Name",
+            "dateFrom": "Date from",
+            "dateTo": "Date to",
+            "status": "Status",
+            "description": "Description",
+            "sendButton": "Send"
+        }
+    },
+    "kanban": {
+        "title": "Kanban",
+        "column": {
+            "todo": "To do",
+            "doing": "Doing",
+            "done": "Done"
+        },
+        "card": {
+            "assigned": "Assigned to: ",
+            "button": {
+                "detail": "details",
+                "move": "move"
+            }
+        },
+        "addTaskButton": "Add task"
+    }
+}

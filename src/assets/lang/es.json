@@ -1,0 +1,49 @@
+{
+    "mainNav": {
+        "home": "Inicio"
+    },
+    "list": {
+        "title": "Lista de tareas",
+        "filter": "Filtrar por nombre de tarea",
+        "table": {
+            "headers": {
+                "task": "Tarea",
+                "users": "Usuarios",
+                "status": "Estado",
+                "date": "Fechas"
+            },
+            "empty": "No hay elementos"
+        },
+        "addTaskButton": "Añadir tarea"
+    },
+    "modal": {
+        "closeButton": "Cerrar"
+    },
+    "newTask": {
+        "title": "Añadir tarea",
+        "form": {
+            "name": "Nombre",
+            "dateFrom": "Fecha desde",
+            "dateTo": "Fecha hasta",
+            "status": "Estado",
+            "description": "Descripción",
+            "sendButton": "Enviar"
+        }
+    },
+    "kanban": {
+        "title": "Kanban",
+        "column": {
+            "todo": "Por hacer",
+            "doing": "Haciendo",
+            "done": "Hecho"
+        },
+        "card": {
+            "assigned": "Asignada a: ",
+            "button": {
+                "detail": "detalles",
+                "move": "mover"
+            }
+        },
+        "addTaskButton": "Añadir tarea"
+    }
+}

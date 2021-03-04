@@ -1,1 +1,9 @@
-<p>main-nav works!</p>
+<nav class="mainnav">
+    <ol class="mainnav__list">
+        <li class="mainnav__list-item"><a [routerLink]="['/kanban']" class="mainnav__link">{{ 'mainNav.home' | translate}}</a></li>
+    </ol>
+    <div class="mainnav__bottom">
+        <button class="mainnav__language" class="{{ !isSpanish() ? 'mainnav__language--active' : ''}}" (click)="changeLocale('en')">English</button>
+        <button class="mainnav__language" class="{{ isSpanish() ? 'mainnav__language--active': '' }}" (click)="changeLocale('es')">Español</button>
+    </div>
+</nav>
