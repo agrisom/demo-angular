@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Task } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,18 +11,18 @@ export class TaskService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<any>(this.path);
+    return this.http.get<Task[]>(this.path);
   }
 
   getById(id) {
-    return this.http.get(this.path + id);
+    return this.http.get<Task>(this.path + id);
   }
 
-  update(task) {
-    return this.http.put(this.path, task);
+  update(task: Task) {
+    return this.http.put(this.path + task.id, task);
   }
 
-  save(task) {
+  save(task: Task) {
     return this.http.post(this.path, task);
   }
 }

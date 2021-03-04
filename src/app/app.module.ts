@@ -16,6 +16,11 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { AddTaskComponent } from './pages/add-task/add-task.component';
 import { StatusButtonComponent } from './components/status-button/status-button.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { TaskDetailModalComponent } from './components/task-detail-modal/task-detail-modal.component';
+import { KanbanListComponent } from './components/kanban-list/kanban-list.component';
+import { KanbanBoardComponent } from './components/kanban-board/kanban-board.component';
+import { KanbanCardComponent } from './components/kanban-board/kanban-card/kanban-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -27,12 +32,18 @@ registerLocaleData(localeEn, 'en');
     KanbanComponent,
     AddTaskComponent,
     StatusButtonComponent,
-    ErrorComponent
+    ErrorComponent,
+    TaskDetailModalComponent,
+    KanbanListComponent,
+    KanbanBoardComponent,
+    KanbanCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot(
       {
         loader: {

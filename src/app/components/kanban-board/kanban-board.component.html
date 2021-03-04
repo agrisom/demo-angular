@@ -1,0 +1,20 @@
+<div class="grid">
+    <div class="col-4">
+        <div class="kanbancol bg--red">
+            <div class="kanbancol__title">{{'kanban.column.todo' | translate}}</div>
+            <kanban-card *ngFor="let task of filterTaskByStatus('to do')" [task]="task" [users]="getUsersNames(task.users)" (showDetail)="openDetails($event)" (changeStatus)="changeStatus($event)"></kanban-card>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="kanbancol bg--green">
+            <div class="kanbancol__title">{{'kanban.column.doing' | translate}}</div>
+            <kanban-card *ngFor="let task of filterTaskByStatus('doing')" [task]="task" [users]="getUsersNames(task.users)" (showDetail)="openDetails($event)" (changeStatus)="changeStatus($event)"></kanban-card>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="kanbancol bg--orange">
+            <div class="kanbancol__title">{{'kanban.column.done' | translate}}</div>
+            <kanban-card *ngFor="let task of filterTaskByStatus('done')" [task]="task" [users]="getUsersNames(task.users)" (showDetail)="openDetails($event)" (changeStatus)="changeStatus($event)"></kanban-card>
+        </div>
+    </div>
+</div>

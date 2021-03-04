@@ -1,1 +1,35 @@
-<p>add-task works!</p>
+<div class="container">
+    <h1>{{'newTask.title' | translate}}</h1>
+
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div class="mt-1">
+            <label class="mr-1">{{'newTask.form.name' | translate}}</label>
+            <input id="name" type="text" formControlName="name">
+        </div>
+        <div class="mt-1">
+            <label class="mr-1">{{'newTask.form.dateFrom' | translate}}</label>
+            <input id="dateFrom" type="date" formControlName="dateFrom">
+        </div>
+        <div class="mt-1">
+            <label class="mr-1">{{'newTask.form.dateTo' | translate}}</label>
+            <input id="dateTo" type="date" formControlName="dateTo">
+        </div>
+        <div class="mt-1">
+            <label class="mr-1">{{'newTask.form.status' | translate}}</label>
+            <select id="status" formControlName="status">
+                <option value="to do">To do</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+            </select>
+        </div>
+        <div class="mt-1">
+            <label class="mr-1">{{'newTask.form.description' | translate}}</label>
+            <textarea id="description" formControlName="description"></textarea>
+        </div>
+        <div class="mt-2">
+            <button type="submit">{{'newTask.form.sendButton' | translate}}</button>
+        </div>
+    </form>
+</div>
+<!-- 
+<input type="text" [(ngModel)]="task.name"> -->
