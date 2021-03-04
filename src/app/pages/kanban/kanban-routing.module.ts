@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddTaskComponent } from '../add-task/add-task.component';
 import { KanbanComponent } from './kanban.component';
 
 const routes: Routes = [
-  {path: '', component: KanbanComponent}
+  {path: '', component: KanbanComponent},
+  {path: 'add', component: AddTaskComponent}
 ];
 
 @NgModule({

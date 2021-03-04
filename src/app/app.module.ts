@@ -13,6 +13,9 @@ import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import localeEn from '@angular/common/locales/en';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { AddTaskComponent } from './pages/add-task/add-task.component';
+import { StatusButtonComponent } from './components/status-button/status-button.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -21,7 +24,10 @@ registerLocaleData(localeEn, 'en');
   declarations: [
     AppComponent,
     MainNavComponent,
-    KanbanComponent
+    KanbanComponent,
+    AddTaskComponent,
+    StatusButtonComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
