@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>{{'kanban.title' | translate}}</h1>
+    <kanban-board></kanban-board>
+
+    <div class="mt-2">
+        <status-button [text]="'list.addTaskButton' | translate" [class]="'status-button--inline'" (click)="goToAdd()"></status-button>
+    </div>
+    <task-detail-modal *ngIf="getTaskDetails()" [task]="getTaskDetails()" (cerrarModal)="setTaskDetails(null)"></task-detail-modal>
+</div>

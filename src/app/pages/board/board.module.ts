@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { KaknbanRoutingModule } from './kaknban-routing.module';
+import { BoardRoutingModule } from './board-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    KaknbanRoutingModule
+    BoardRoutingModule
   ]
 })
-export class KaknbanModule { }
+export class BoardModule { }

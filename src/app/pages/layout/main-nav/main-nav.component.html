@@ -1,6 +1,9 @@
 <nav class="mainnav">
     <ol class="mainnav__list">
-        <li class="mainnav__list-item"><a [routerLink]="['/kanban']" class="mainnav__link">{{ 'mainNav.home' | translate}}</a></li>
+        <li class="mainnav__list-item"><a [routerLink]="['/list']" class="mainnav__link">{{ 'mainNav.list' | translate}}</a></li>
+        <li class="mainnav__list-item"><a [routerLink]="['/board']" class="mainnav__link">{{ 'mainNav.kanban' | translate}}</a></li>
+        <li class="mainnav__list-item"><a [routerLink]="['/other']" class="mainnav__link">{{ 'mainNav.others' | translate}}</a></li>
+        <li class="mainnav__list-item"><a [routerLink]="['/kanban']" class="mainnav__link">{{ 'mainNav.kanban_v2' | translate}}</a></li>
     </ol>
     <div class="mainnav__bottom">
         <button class="mainnav__language" class="{{ !isSpanish() ? 'mainnav__language--active' : ''}}" (click)="changeLocale('en')">English</button>

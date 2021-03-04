@@ -1,6 +1,9 @@
 {
     "mainNav": {
-        "home": "Inicio"
+        "list": "Lista",
+        "kanban": "Kanban",
+        "kanban_v2": "Kanban v2",
+        "others": "Otros"
     },
     "list": {
         "title": "Lista de tareas",
@@ -27,7 +30,8 @@
             "dateTo": "Fecha hasta",
             "status": "Estado",
             "description": "Descripción",
-            "sendButton": "Enviar"
+            "sendButton": "Enviar",
+            "cancelButton": "Cancelar"
         }
     },
     "kanban": {

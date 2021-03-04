@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SharedTaskDataServiceService } from 'src/app/store/shared-task-data-service.service';
 
 @Component({
-  selector: 'app-kanban-board',
+  selector: 'kanban-board',
   templateUrl: './kanban-board.component.html',
   styleUrls: ['./kanban-board.component.sass']
 })

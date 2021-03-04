@@ -21,6 +21,9 @@ import { KanbanListComponent } from './components/kanban-list/kanban-list.compon
 import { KanbanBoardComponent } from './components/kanban-board/kanban-board.component';
 import { KanbanCardComponent } from './components/kanban-board/kanban-card/kanban-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BoardComponent } from './pages/board/board.component';
+import { ListComponent } from './pages/list/list.component';
+import { OtherComponent } from './pages/other/other.component';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -36,7 +39,10 @@ registerLocaleData(localeEn, 'en');
     TaskDetailModalComponent,
     KanbanListComponent,
     KanbanBoardComponent,
-    KanbanCardComponent
+    KanbanCardComponent,
+    BoardComponent,
+    ListComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,

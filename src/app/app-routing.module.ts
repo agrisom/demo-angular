@@ -4,6 +4,9 @@ import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'kanban', pathMatch: 'full'},
+  {path: 'list', loadChildren: () => import('./pages/list/list.module').then(m => m.ListModule)},
+  {path: 'board', loadChildren: () => import('./pages/board/board.module').then(m => m.BoardModule)},
+  {path: 'other', loadChildren: () => import('./pages/other/other.module').then(m => m.OtherModule)},
   {path: 'kanban', loadChildren: () => import('./pages/kanban/kanban.module').then(m => m.KanbanModule)},
   {path: '**', component: ErrorComponent},
 ];

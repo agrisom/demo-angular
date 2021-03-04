@@ -40,4 +40,8 @@ export class AddTaskComponent implements OnInit {
       }
     ).subscribe(() => this.location.back());
   }
+
+  back() {
+    this.location.back();
+  }
 }

@@ -1,6 +1,9 @@
 {
     "mainNav": {
-        "home": "Home"
+        "list": "List",
+        "kanban": "Kanban",
+        "kanban_v2": "Kanban v2",
+        "others": "Others"
     },
     "list": {
         "title": "Task's list",
@@ -27,7 +30,8 @@
             "dateTo": "Date to",
             "status": "Status",
             "description": "Description",
-            "sendButton": "Send"
+            "sendButton": "Send",
+            "cancelButton": "Cancelar"
         }
     },
     "kanban": {
