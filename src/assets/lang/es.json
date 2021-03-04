@@ -4,7 +4,8 @@
         "list": "Lista",
         "kanban": "Kanban",
         "kanban_v2": "Kanban v2",
-        "others": "Otros"
+        "others": "Otros",
+        "test": "Test"
     },
     "list": {
         "title": "Lista de tareas",

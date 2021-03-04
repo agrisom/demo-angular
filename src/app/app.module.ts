@@ -9,6 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { registerLocaleData } from '@angular/common';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import localeEs from '@angular/common/locales/es';
 import localeEn from '@angular/common/locales/en';
@@ -28,6 +29,7 @@ import { CustomTimePipe } from './pipes/custom-time.pipe';
 import { MyCustomDatePipe } from './pipes/my-custom-date.pipe';
 import { ViewMenuComponent } from './pages/kanban/view-menu/view-menu.component';
 import { KanbanFilterComponent } from './pages/kanban/kanban-filter/kanban-filter.component';
+import { TestComponent } from './pages/test/test.component';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -50,7 +52,8 @@ registerLocaleData(localeEn, 'en');
     CustomTimePipe,
     MyCustomDatePipe,
     ViewMenuComponent,
-    KanbanFilterComponent
+    KanbanFilterComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ registerLocaleData(localeEn, 'en');
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule,
     TranslateModule.forRoot(
       {
         loader: {

@@ -3,7 +3,8 @@
         "list": "List",
         "kanban": "Kanban",
         "kanban_v2": "Kanban v2",
-        "others": "Others"
+        "others": "Others",
+        "test": "Test"
     },
     "list": {
         "title": "Task's list",
