@@ -1,4 +1,11 @@
+<h1>Currency pipes</h1>
 <p>A: {{99 | currency}}</p>
 <p>A: {{99 | currency:'EUR'}}</p>
 
+<h1>Subroutes</h1>
 <a [routerLink]="['/other/12345']">Other Child</a>
+
+<h1>Custom pipes</h1>
+<p>Custom pipe: 3.5 ~ {{3.5 | customTime}}</p>
+<p>Custom pipe: 2 ~ {{2 | customTime}}</p>
+<p>Custom pipe: 5.25 ~ {{5.25 | customTime}}</p>

@@ -24,6 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BoardComponent } from './pages/board/board.component';
 import { ListComponent } from './pages/list/list.component';
 import { OtherComponent } from './pages/other/other.component';
+import { CustomTimePipe } from './pipes/custom-time.pipe';
+import { MyCustomDatePipe } from './pipes/my-custom-date.pipe';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -42,7 +44,9 @@ registerLocaleData(localeEn, 'en');
     KanbanCardComponent,
     BoardComponent,
     ListComponent,
-    OtherComponent
+    OtherComponent,
+    CustomTimePipe,
+    MyCustomDatePipe
   ],
   imports: [
     BrowserModule,

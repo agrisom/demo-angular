@@ -31,11 +31,6 @@ export class KanbanListComponent implements OnInit {
     this.sharedData.taskDetail = task;
   }
 
-  formatDate(dateString) {
-    const dateParts = dateString.split("/");
-    return new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
-  }
-
   tasksFiltered() {
     if(this.filterName && this.filterName.length) {
       const condition = this.filterName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();

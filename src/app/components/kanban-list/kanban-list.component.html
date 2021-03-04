@@ -18,7 +18,7 @@
                     <td><status-button [text]="task.name" (click)="openDetails(task)"></status-button></td>
                     <td>{{getUsersNames(task.users)}}</td>
                     <td><status-button [text]="task.status" (click)="changeStatus(task)"></status-button></td>
-                    <td>{{formatDate(task.datefrom) | date:'longDate'}} - {{formatDate(task.dateto) | date}}</td>
+                    <td>{{task.datefrom}} - {{task.dateto | myCustomDate}}</td>
                 </tr>
             </tbody>
         </table>
