@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', redirectTo: 'kanban', pathMatch: 'full'},
+  {path: 'kanban', loadChildren: () => import('./pages/kanban/kanban.module').then(m => m.KanbanModule)},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
