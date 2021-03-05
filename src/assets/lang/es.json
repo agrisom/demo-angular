@@ -1,58 +1,50 @@
 {
-    "loremIpsum": "Quisque ac dui euismod, commodo tellus in, aliquam lorem. Nam auctor sem sed elementum fringilla. Nulla sit amet risus magna. Etiam est augue, hendrerit",
     "mainNav": {
-        "list": "Lista",
-        "kanban": "Kanban",
-        "kanban_v2": "Kanban v2",
+        "tasks": "Tareas",
         "others": "Otros",
         "test": "Test"
     },
-    "list": {
-        "title": "Lista de tareas",
-        "filter": "Filtrar por nombre de tarea",
-        "table": {
-            "headers": {
-                "task": "Tarea",
-                "users": "Usuarios",
+    "task": {
+        "new": {
+            "title": "Nueva tarea",
+            "form": {
+                "name": "Nombre",
+                "dateFrom": "Fecha inicio",
+                "dateTo": "Fecha fin",
                 "status": "Estado",
-                "date": "Fechas"
-            },
-            "empty": "No hay elementos"
+                "description": "Descripción",
+                "sendButton": "Guardar",
+                "cancelButton": "Cancelar"
+            }
         },
-        "addTaskButton": "Añadir tarea"
-    },
-    "modal": {
-        "closeButton": "Cerrar"
-    },
-    "newTask": {
-        "title": "Añadir tarea",
-        "form": {
-            "name": "Nombre",
-            "dateFrom": "Fecha desde",
-            "dateTo": "Fecha hasta",
-            "status": "Estado",
-            "description": "Descripción",
-            "sendButton": "Enviar",
-            "cancelButton": "Cancelar"
+        "addButton": "Añadir tarea",
+        "filter": {
+            "name": "Filtrar por nombre de tarea"
         }
     },
     "kanban": {
-        "title": "Kanban",
-        "column": {
-            "todo": "Por hacer",
-            "doing": "Haciendo",
-            "done": "Hecho"
-        },
-        "card": {
-            "assigned": "Asignada a: ",
-            "button": {
-                "detail": "detalles",
-                "move": "mover"
+        "board": {
+            "card": {
+                "assigned": "Asignada a: ",
+                "button": {
+                    "detail": "detalles",
+                    "move": "mover"
+                }
             }
-        },
-        "addTaskButton": "Añadir tarea",
-        "filter": {
-            "name": "Filtrar por nombre de tarea..."
+        }, 
+        "list": {
+            "table": {
+                "headers": {
+                    "task": "Tarea",
+                    "users": "Usuarios",
+                    "status": "Estado",
+                    "date": "Fechas"
+                },
+                "empty": "No hay elementos"
+            }
         }
+    },
+    "modal": {
+        "closeButton": "Cerrar"
     }
 }

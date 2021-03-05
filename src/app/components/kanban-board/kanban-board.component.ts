@@ -13,12 +13,25 @@ export class KanbanBoardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  getGroups() {
+    return this.sharedData.getGroups();
+  }
+
+  getColor(group) {
+    return Number.isInteger(group) ? '' : '__' + group.replace(' ', '');
   }
 
   getUsersNames(users) {
     return users
       .map(id => this.sharedData.users.find(user => user.id == id).name)
       .join(', ');
+  }
+
+  getGroupName(group) {
+    return group.length == 0 ? 'unasigned': group.length > 1 ? group : this.sharedData.users.find(user => user.id == group).name;
   }
 
   changeStatus(task) {
@@ -30,9 +43,14 @@ export class KanbanBoardComponent implements OnInit {
     this.sharedData.taskDetail = task;
   }
 
-  filterTaskByStatus(status) {
-    return this.sharedData.getTasks().filter(task => {
-        return task.status == status
+  filterTaskGroup(group: string) {
+    const tasks = this.sharedData.getTasks().filter(task => {
+      if(this.sharedData.filter && this.sharedData.filter.groupBy && this.sharedData.filter.groupBy == 'user') {
+        return Number.isInteger(group) ? task.users.includes(group) : task.users.length == 0;
+      } else {
+        return task.status == group;
+      }
     });
+    return tasks;
   }
 }

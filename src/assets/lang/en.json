@@ -1,57 +1,50 @@
 {
     "mainNav": {
-        "list": "List",
-        "kanban": "Kanban",
-        "kanban_v2": "Kanban v2",
-        "others": "Others",
+        "tasks": "Tasks",
+        "others": "Other",
         "test": "Test"
     },
-    "list": {
-        "title": "Task's list",
-        "filter": "Filter by taskname",
-        "table": {
-            "headers": {
-                "task": "Task",
-                "users": "Users",
-                "status": "Status",
-                "date": "Date"
-            },
-            "empty": "There isn's elements"
+    "task": {
+        "new": {
+            "title": "New task",
+            "form": {
+                "name": "Name",
+                "dateFrom": "Date from",
+                "dateTo": "Date to",
+                "status": "State",
+                "description": "Description",
+                "sendButton": "Save",
+                "cancelButton": "Cancel"
+            }
         },
-        "addTaskButton": "Add task"
-    },
-    "modal": {
-        "closeButton": "Close"
-    },
-    "newTask": {
-        "title": "Add task",
-        "form": {
-            "name": "Name",
-            "dateFrom": "Date from",
-            "dateTo": "Date to",
-            "status": "Status",
-            "description": "Description",
-            "sendButton": "Send",
-            "cancelButton": "Cancelar"
+        "addButton": "Add task",
+        "filter": {
+            "name": "Filter by task name"
         }
     },
     "kanban": {
-        "title": "Kanban",
-        "column": {
-            "todo": "To do",
-            "doing": "Doing",
-            "done": "Done"
-        },
-        "card": {
-            "assigned": "Assigned to: ",
-            "button": {
-                "detail": "details",
-                "move": "move"
+        "board": {
+            "card": {
+                "assigned": "Assigned to: ",
+                "button": {
+                    "detail": "details",
+                    "move": "move"
+                }
             }
-        },
-        "addTaskButton": "Add task",
-        "filter": {
-            "name": "Filter by task name..."
+        }, 
+        "list": {
+            "table": {
+                "headers": {
+                    "task": "Task",
+                    "users": "Users",
+                    "status": "State",
+                    "date": "Dates"
+                },
+                "empty": "There are no tasks"
+            }
         }
+    },
+    "modal": {
+        "closeButton": "Close"
     }
 }

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './pages/layout/main-nav/main-nav.component';
-import { KanbanComponent } from './pages/kanban/kanban.component';
+import { TaskComponent } from './pages/tasks/task.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -22,14 +22,13 @@ import { KanbanListComponent } from './components/kanban-list/kanban-list.compon
 import { KanbanBoardComponent } from './components/kanban-board/kanban-board.component';
 import { KanbanCardComponent } from './components/kanban-board/kanban-card/kanban-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BoardComponent } from './pages/board/board.component';
-import { ListComponent } from './pages/list/list.component';
 import { OtherComponent } from './pages/other/other.component';
 import { CustomTimePipe } from './pipes/custom-time.pipe';
 import { MyCustomDatePipe } from './pipes/my-custom-date.pipe';
-import { ViewMenuComponent } from './pages/kanban/view-menu/view-menu.component';
-import { KanbanFilterComponent } from './pages/kanban/kanban-filter/kanban-filter.component';
+import { ViewMenuComponent } from './pages/tasks/view-menu/view-menu.component';
+import { TaskFilterComponent } from './pages/tasks/task-filter/task-filter.component';
 import { TestComponent } from './pages/test/test.component';
+import { TaskGroupComponent } from './pages/tasks/task-group/task-group.component';
 
 registerLocaleData(localeEs, 'es');
 registerLocaleData(localeEn, 'en');
@@ -38,7 +37,7 @@ registerLocaleData(localeEn, 'en');
   declarations: [
     AppComponent,
     MainNavComponent,
-    KanbanComponent,
+    TaskComponent,
     AddTaskComponent,
     StatusButtonComponent,
     ErrorComponent,
@@ -46,14 +45,13 @@ registerLocaleData(localeEn, 'en');
     KanbanListComponent,
     KanbanBoardComponent,
     KanbanCardComponent,
-    BoardComponent,
-    ListComponent,
     OtherComponent,
     CustomTimePipe,
     MyCustomDatePipe,
     ViewMenuComponent,
-    KanbanFilterComponent,
-    TestComponent
+    TaskFilterComponent,
+    TestComponent,
+    TaskGroupComponent
   ],
   imports: [
     BrowserModule,

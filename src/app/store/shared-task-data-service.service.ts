@@ -12,7 +12,10 @@ export class SharedTaskDataServiceService {
   tasks : Task[] = [];
   taskDetail : Task = null;
   filter : {
-    name: string
+    name?: string,
+    value?: string,
+    groupBy?: string,
+    orderBy?: string
   };
 
   constructor(
@@ -37,9 +40,25 @@ export class SharedTaskDataServiceService {
     });
   }
 
+  getGroups() {
+    if(this.filter && this.filter.groupBy && this.filter.groupBy.length) {
+      switch(this.filter.groupBy) {
+        case 'user': {
+          let array = [''];
+          const users = this.tasks.map(task => task.users);
+          users.filter(x => x.length).forEach(u => array = array.concat(u));
+          
+          return [...new Set(array)];
+        }
+        default: return [...new Set(this.tasks.map(task => task.status))];
+      }
+    }
+    return [...new Set(this.tasks.map(task => task.status))];
+  }
+
   getTasks() {
-    if(this.filter && this.filter.name && this.filter.name.length) {
-      const condition = this.filter.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if(this.filter && this.filter.value && this.filter.value.length) {
+      const condition = this.filter.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
       return this.tasks.filter(task => {
         return task.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(condition) != -1
       })

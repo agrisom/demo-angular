@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'demo-angular-v2';
+  title = 'demo-angular';
   supportLanguages = ['en', 'es'];
 
   constructor(private translateService: TranslateService) {

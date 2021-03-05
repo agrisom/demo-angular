@@ -4,6 +4,6 @@ export class Task {
     dateto: string;
     status: string;
     description: string;
-    users: [];
+    users: string[];
     id?: number;
 }

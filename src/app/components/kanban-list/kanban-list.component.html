@@ -3,10 +3,10 @@
         <table class="listitems__table" *ngIf="getTasks().length; else elseBlock">
             <thead>
                 <tr class="listitems__headers">
-                <th>{{'list.table.headers.task' | translate}}</th>
-                <th>{{'list.table.headers.users' | translate}}</th>
-                <th>{{'list.table.headers.status' | translate}}</th>
-                <th>{{'list.table.headers.date' | translate}}</th>
+                <th>{{'kanban.list.table.headers.task' | translate}}</th>
+                <th>{{'kanban.list.table.headers.users' | translate}}</th>
+                <th>{{'kanban.list.table.headers.status' | translate}}</th>
+                <th>{{'kanban.list.table.headers.date' | translate}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,7 +19,7 @@
             </tbody>
         </table>
         <ng-template #elseBlock>
-        <div class="listitems__empty">{{'list.table.empty' | translate}}</div>
+            <div class="listitems__empty">{{'kanban.list.table.empty' | translate}}</div>
         </ng-template>
     </div>
 </div>

@@ -1,8 +1,8 @@
 <div class="kanbancard">
     <div class="kanbancard__title">{{task.name}}</div>
-    <div class="kanbancard__users">{{'kanban.card.assigned' | translate}} {{users}}</div>
+    <div class="kanbancard__users">{{'kanban.board.card.assigned' | translate}} {{users}}</div>
     <div class="kanbancard__actions">
-        <status-button [text]="'kanban.card.button.detail' | translate" [class]="'status-button--small'" (click)="showDetail()"></status-button>
-        <status-button [text]="'kanban.card.button.move' | translate" [class]="'status-button--small'" (click)="changeStatus()"></status-button>
+        <status-button [text]="'kanban.board.card.button.detail' | translate" [class]="'status-button--small'" (click)="showDetail()"></status-button>
+        <status-button [text]="'kanban.board.card.button.move' | translate" [class]="'status-button--small'" (click)="changeStatus()"></status-button>
     </div>
 </div>

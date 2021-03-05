@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BoardRoutingModule } from './board-routing.module';
+import { TaskRoutingModule } from './task-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    BoardRoutingModule
+    TaskRoutingModule
   ]
 })
-export class BoardModule { }
+export class TaskModule { }
